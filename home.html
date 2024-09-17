@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Wisnu Hidayat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="rain"></div>
+<div class="lightning"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">WH</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Wisnu Hidayat</h1>
+            <p>Web Developer | UI/UX Enthusiast</p>
+            <a href="#contact" class="btn">Hubungi Saya</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="img/wisnu.png" alt="Wisnu Hidayat">
+                </div>
+                <div class="about-text">
+                    <p>Halo! Saya Wisnu Hidayat, seorang web developer dengan passion dalam UI/UX design. Saya selalu berusaha menciptakan pengalaman digital yang tidak hanya fungsional, tapi juga menyenangkan untuk digunakan.</p>
+                    <table class="profile-table">
+                        <tr>
+                            <th>Nama</th>
+                            <td>Wisnu Hidayat</td>
+                        </tr>
+                        <tr>
+                            <th>Alamat</th>
+                            <td>Ngabul RT04/03 Tahunan Jepara</td>
+                        </tr>
+                        <tr>
+                            <th>Kampus</th>
+                            <td>UNISNU</td>
+                        </tr>
+                        <tr>
+                            <th>NIM</th>
+                            <td>231240001422</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skills">
+                <div class="skill-item">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h3>HTML5 & CSS3</h3>
+                    <p>Struktur website yang solid dan styling yang menarik</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js skill-icon"></i>
+                    <h3>JavaScript</h3>
+                    <p>Interaktivitas dan dinamisme website</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-paint-brush skill-icon"></i>
+                    <h3>UI Design</h3>
+                    <p>Desain antarmuka yang intuitif dan menarik</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-user-friends skill-icon"></i>
+                    <h3>UX Research</h3>
+                    <p>Analisis dan peningkatan pengalaman pengguna</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Proyek Terbaru</h2>
+            <div class="projects">
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="img/ayam.png" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-commerce Website</h3>
+                        <p>Pengembangan website e-commerce dengan fitur keranjang belanja dan pembayaran online.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="img/asli.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Aplikasi Manajemen Tugas</h3>
+                        <p>Aplikasi web untuk manajemen tugas dengan fitur kolaborasi tim.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-img">
+                        <img src="img/gojo.jpg" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Redesign UI Dashboard</h3>
+                        <p>Peningkatan UX dan redesign UI untuk dashboard analitik perusahaan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Pesan</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Wisnu Hidayat. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamen Rider: Storm Transformation</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <div id="storm-container">
+        <div id="rain-container"></div>
+        <div id="lightning"></div>
+    </div>
+    <div id="game-container">
+        <div id="rider-transform" class="hidden">
+            <img src="img/gg.png" alt="Kamen Rider Silhouette">
+        </div>
+        <div id="henshin-belt" class="hidden">
+            <div class="belt-light"></div>
+            <div class="belt-light"></div>
+            <div class="belt-light"></div>
+        </div>
+        <button id="henshin-btn" class="hidden">HENSHIN!</button>
+    </div>
+    
+    <audio id="background-music" loop>
+        <source src="kamen-rider-theme.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="henshin-sound" src="audio/Kamen Rider Ryuki Henshin Sound.mp3"></audio>
+    <audio id="thunder-sound" src="thunder-sound.mp3"></audio>
+    
+    <script src="script2.js"></script>
+</body>
+</html>

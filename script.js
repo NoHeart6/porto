@@ -3,9 +3,6 @@ function showSection(sectionId) {
         section.classList.add('hidden');
     });
     document.getElementById(sectionId).classList.remove('hidden');
-    if (sectionId === 'gallerySection') {
-        loadInitialPhotos();
-    }
 }
 
 function toggleTheme() {
@@ -69,6 +66,10 @@ function changeQuote() {
         newQuote = quotes[Math.floor(Math.random() * quotes.length)];
     }
     quoteElement.textContent = newQuote;
+    quoteElement.style.transform = 'scale(1.1)';
+    setTimeout(() => {
+        quoteElement.style.transform = 'scale(1)';
+    }, 300);
 }
 
 function changeFunFact() {
@@ -84,24 +85,10 @@ function changeFunFact() {
         newFact = facts[Math.floor(Math.random() * facts.length)];
     }
     factElement.textContent = newFact;
-}
-
-function addRandomPhoto() {
-    const gallery = document.getElementById('photoGallery');
-    const img = document.createElement('img');
-    img.src = `https://picsum.photos/300/200?random=${Math.random()}`;
-    img.alt = 'Foto Random';
-    img.className = 'gallery-photo';
-    gallery.appendChild(img);
-}
-
-function loadInitialPhotos() {
-    const gallery = document.getElementById('photoGallery');
-    if (gallery.children.length === 0) {
-        for (let i = 0; i < 6; i++) {
-            addRandomPhoto();
-        }
-    }
+    factElement.style.transform = 'rotate(5deg)';
+    setTimeout(() => {
+        factElement.style.transform = 'rotate(0deg)';
+    }, 300);
 }
 
 document.getElementById('profilePic').addEventListener('click', function() {
@@ -125,6 +112,23 @@ document.addEventListener('keydown', (e) => {
         showNotification('Easter egg activated! Enjoy your new... interesting font.');
         konami = '';
     }
+});
+
+// Smooth scrolling for internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('nav-toggle').checked = false;
+    });
 });
 
 // Load initial content

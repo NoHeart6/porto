@@ -66,6 +66,10 @@
             right: 20px;
             font-size: 24px;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .easter-egg:hover {
+            transform: scale(1.2) rotate(15deg);
         }
         .hidden-message {
             display: none;
@@ -79,6 +83,22 @@
             border-radius: 10px;
             font-size: 18px;
             text-align: center;
+            z-index: 1000;
+        }
+        @media screen and (max-width: 600px) {
+            .dimension-content {
+                margin: 60px auto;
+                padding: 15px;
+            }
+            .dimension-item {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .dimension-item h2 {
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -192,6 +212,44 @@
                 konamiCode = konamiCode.substr(konamiCode.length - secretCode.length);
             }
         });
+
+        // Animasi parallax sederhana
+        window.addEventListener('scroll', () => {
+            const items = document.querySelectorAll('.dimension-item');
+            items.forEach((item, index) => {
+                const speed = 1 + index * 0.1;
+                const yPos = -(window.pageYOffset * speed / 10);
+                item.style.transform = `translateY(${yPos}px)`;
+            });
+        });
+
+        // Efek gelombang saat klik
+        document.addEventListener('click', (e) => {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            document.body.appendChild(ripple);
+            ripple.style.left = `${e.clientX}px`;
+            ripple.style.top = `${e.clientY}px`;
+            ripple.style.animation = 'ripple-effect .4s linear';
+            ripple.onanimationend = () => document.body.removeChild(ripple);
+        });
     </script>
+    <style>
+        .ripple {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            transform: scale(0);
+            pointer-events: none;
+            width: 100px;
+            height: 100px;
+        }
+        @keyframes ripple-effect {
+            to {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+    </style>
 </body>
 </html>

@@ -145,10 +145,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close mobile menu when a link is clicked
-    document.querySelectorAll('nav ul li a').forEach(link => {
+    // Mobile menu toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+
+    navToggle.addEventListener('change', function() {
+        if (this.checked) {
+            navMenu.style.display = 'flex';
+        } else {
+            navMenu.style.display = 'none';
+        }
+    });
+
+    navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            document.getElementById('nav-toggle').checked = false;
+            navToggle.checked = false;
+            navMenu.style.display = 'none';
         });
     });
 

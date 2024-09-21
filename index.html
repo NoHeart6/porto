@@ -11,6 +11,11 @@
 <body>
     <header>
         <nav>
+            <div class="logo">WH</div>
+            <input type="text" aria-label="Nama" name="nama" required>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
             <ul>
                 <li><a href="#" onclick="showSection('homeSection')">Beranda</a></li>
                 <li><a href="#" onclick="showSection('profileSection')">Profil</a></li>
@@ -53,33 +58,33 @@
         <section id="profileSection" class="card hidden">
             <h1>Profil Wisnu Hidayat</h1>
             <img src="img/wisnu.png" alt="Foto Wisnu Hidayat (Mungkin)" id="profilePic" class="interactive-element">
-            <table>
-                <tr>
-                    <th>Nama</th>
-                    <td>Wisnu Hidayat (Bukan, Bukan Keturunan Dewa)</td>
-                </tr>
-                <tr>
-                    <th>Alamat</th>
-                    <td>Ngabul RT 04/03, Tahunan, Jepara (Kalau Nyasar, Salahin Google Maps)</td>
-                </tr>
-                <tr>
-                    <th>Asal Kampus</th>
-                    <td>UNISNU (Universitas Nebeng Sukses Numpang Urusan)</td>
-                </tr>
-                <tr>
-                    <th>Jurusan</th>
-                    <td>Teknik Informatika (Alias Kuli Keyboard Profesional)</td>
-                </tr>
-                <tr>
-                    <th>Hobi</th>
-                    <td>Ngopi (Sambil Mikirin Skripsi), Stalking Mantan (Eh, Maksudnya Riset Pasar)</td>
-                </tr>
-                <tr>
-                    <th>Skill Tersembunyi</th>
-                    <td>Bisa Hilang Saat Ada Kerjaan Kelompok</td>
-                </tr>
-            </table>
-            <p>Fun Fact: Pernah nyoba bikin robot untuk bantu-bantu di rumah. Hasilnya? Robotnya malah jadi tukang gosip sama emak-emak komplek. 🤖💅</p>
+            <div class="profile-info">
+                <div class="info-item">
+                    <h3>Nama</h3>
+                    <p>Wisnu Hidayat (Bukan, Bukan Keturunan Dewa)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Alamat</h3>
+                    <p>Ngabul RT 04/03, Tahunan, Jepara (Kalau Nyasar, Salahin Google Maps)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Asal Kampus</h3>
+                    <p>UNISNU (Universitas Nebeng Sukses Numpang Urusan)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Jurusan</h3>
+                    <p>Teknik Informatika (Alias Kuli Keyboard Profesional)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Hobi</h3>
+                    <p>Ngopi (Sambil Mikirin Skripsi), Stalking Mantan (Eh, Maksudnya Riset Pasar)</p>
+                </div>
+                <div class="info-item">
+                    <h3>Skill Tersembunyi</h3>
+                    <p>Bisa Hilang Saat Ada Kerjaan Kelompok</p>
+                </div>
+            </div>
+            <p class="fun-fact">Fun Fact: Pernah nyoba bikin robot untuk bantu-bantu di rumah. Hasilnya? Robotnya malah jadi tukang gosip sama emak-emak komplek. 🤖💅</p>
         </section>
 
         <section id="blogSection" class="hidden">

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisnu Hidayat - Mahasiswa Biasa, Mimpi Luar Biasa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('homeSection')">Beranda</a></li>
+                <li><a href="#" onclick="showSection('profileSection')">Profil</a></li>
+                <li><a href="#" onclick="showSection('blogSection')">Blog</a></li>
+                <li><a href="dimensi.html" class="dimension-button">Pindah Dimensi</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Ganti tema"><i class="fas fa-moon" aria-hidden="true"></i></button>
+
+    <main>
+        <section id="homeSection" class="card">
+            <h1>Selamat Datang di Dunia Wisnu Hidayat</h1>
+            <p>Halo! Saya Wisnu, mahasiswa biasa dengan mimpi luar biasa. Kalau kamu mencari website penuh motivasi dan kata-kata bijak, maaf... kamu salah alamat. Di sini cuma ada cerita seorang mahasiswa yang masih bingung mau jadi apa setelah lulus nanti.</p>
+            
+            <div class="quote interactive-element" onclick="changeQuote()">
+                "Hidup itu seperti main game. Kadang menang, kadang kalah, tapi yang penting jangan lupa save progress."
+            </div>
+
+            <div id="funFact" onclick="changeFunFact()">
+                Klik untuk fakta (tidak terlalu) menarik!
+            </div>
+            
+            <form id="contactForm">
+                <h2>Hubungi Saya (Kalau Nggak Sibuk)</h2>
+                <label for="nama">Nama (Yang Bisa Dibaca Manusia):</label>
+                <input type="text" id="nama" name="nama" required>
+                
+                <label for="email">Email (Jangan Pake Email Waktu SD Ya):</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="pesan">Pesan (Boleh Panjang, Tapi Jangan Curhat):</label>
+                <textarea id="pesan" name="pesan" required></textarea>
+                
+                <button type="submit"><i class="fas fa-paper-plane"></i> Kirim (Semoga Sampai)</button>
+            </form>
+        </section>
+
+        <section id="profileSection" class="card hidden">
+            <h1>Profil Wisnu Hidayat</h1>
+            <img src="img/wisnu.png" alt="Foto Wisnu Hidayat (Mungkin)" id="profilePic" class="interactive-element">
+            <table>
+                <tr>
+                    <th>Nama</th>
+                    <td>Wisnu Hidayat (Bukan, Bukan Keturunan Dewa)</td>
+                </tr>
+                <tr>
+                    <th>Alamat</th>
+                    <td>Ngabul RT 04/03, Tahunan, Jepara (Kalau Nyasar, Salahin Google Maps)</td>
+                </tr>
+                <tr>
+                    <th>Asal Kampus</th>
+                    <td>UNISNU (Universitas Nebeng Sukses Numpang Urusan)</td>
+                </tr>
+                <tr>
+                    <th>Jurusan</th>
+                    <td>Teknik Informatika (Alias Kuli Keyboard Profesional)</td>
+                </tr>
+                <tr>
+                    <th>Hobi</th>
+                    <td>Ngopi (Sambil Mikirin Skripsi), Stalking Mantan (Eh, Maksudnya Riset Pasar)</td>
+                </tr>
+                <tr>
+                    <th>Skill Tersembunyi</th>
+                    <td>Bisa Hilang Saat Ada Kerjaan Kelompok</td>
+                </tr>
+            </table>
+            <p>Fun Fact: Pernah nyoba bikin robot untuk bantu-bantu di rumah. Hasilnya? Robotnya malah jadi tukang gosip sama emak-emak komplek. 🤖💅</p>
+        </section>
+
+        <section id="blogSection" class="hidden">
+            <h2>Blog 'Sok' Pribadi</h2>
+            <div class="blog-post">
+                <h3>Kenapa Saya Kuliah</h3>
+                <p>Awalnya sih karena dipaksa ortu. Tapi sekarang? Karena udah terlanjur bayar UKT. Mau mundur, dompet nggak memungkinkan. Mau maju, otak kadang nggak sanggup. Yah, namanya juga perjuangan.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Tips Sukses Kuliah</h3>
+                <p>1. Bangun pagi (kalau bisa)<br>2. Dateng ke kelas (minimal absen)<br>3. Catat yang penting-penting (gosip dosen termasuk penting)<br>4. Kerjain tugas (sehari sebelum deadline masih keburu)</p>
+            </div>
+            <div class="blog-post">
+                <h3>Pengalaman Magang: Expectation vs Reality</h3>
+                <p>Expectation: Jadi profesional muda yang keren.<br>Reality: Jadi tukang fotokopi handal dan ahli bikin kopi. Tapi hey, at least kopi buatan gue enak!</p>
+            </div>
+            <div id="userBlogPosts"></div>
+            <div id="addBlogForm" class="card">
+                <h3>Tambahkan Postingan Blog</h3>
+                <form id="blogForm">
+                    <label for="blogTitle">Judul Postingan (Yang Bikin Orang Penasaran):</label>
+                    <input type="text" id="blogTitle" name="blogTitle" required>
+                    
+                    <label for="blogContent">Isi Postingan (Boleh Curhat, Tapi Jangan Lebay):</label>
+                    <textarea id="blogContent" name="blogContent" required></textarea>
+                    
+                    <button type="submit"><i class="fas fa-plus"></i> Tambahkan Postingan (Siapa Tau Viral)</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Wisnu Hidayat. Hak cipta dilindungi. Yang nyontek bakal kena kutuk jomblo 7 turunan.</p>
+    </footer>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

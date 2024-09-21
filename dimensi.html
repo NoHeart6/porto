@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensi Lain Wisnu Hidayat</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd2);
+            animation: gradientBG 15s ease infinite;
+            background-size: 400% 400%;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        .dimension-content {
+            max-width: 800px;
+            margin: 80px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .dimension-item {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .dimension-item:hover {
+            transform: translateY(-5px) rotate(2deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.05);
+        }
+        .dimension-item h2 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        .dimension-item p {
+            color: #34495e;
+        }
+        .easter-egg {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .hidden-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="dimension-content">
+        <h1>Selamat Datang di Dimensi Lain!</h1>
+        
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Kuliah di Atas Awan</h2>
+            <p>Di dimensi ini, kampus UNISNU berada di atas awan. Mahasiswa harus naik balon udara untuk sampai ke kelas. Yang telat? Yah, terbang sendiri pakai sayap imajinasi.</p>
+        </div>
+        
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Wisuda Underwater</h2>
+            <p>Bayangkan wisuda di bawah laut. Toga diganti baju selam, ijazah tahan air, dan rektor adalah seekor ikan paus bijak. Oh, dan jangan lupa bawa oksigen cadangan!</p>
+        </div>
+        
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Kantin Anti Gravitasi</h2>
+            <p>Makan siang jadi lebih seru ketika makananmu melayang-layang. Tantangannya? Tangkap bakso sebelum nyasar ke hidung teman sebelah!</p>
+        </div>
+        
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Perpustakaan Hidup</h2>
+            <p>Buku-buku di sini bisa bicara dan punya kepribadian. Ensiklopedia suka bergosip, novel roman gemar menggoda, dan kamus... yah, dia tetap pendiam seperti biasa.</p>
+        </div>
+        
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>UKM Teleportasi</h2>
+            <p>Unit Kegiatan Mahasiswa paling populer: Teleportasi. Lulusannya dijamin tidak akan telat ke kantor. Meski kadang ada yang nyasar ke dimensi lain saat ujian praktek.</p>
+        </div>
+        
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Skripsi yang Menulis Dirinya Sendiri</h2>
+            <p>Di sini, skripsi menulis dirinya sendiri berdasarkan mimpi-mimpi mahasiswa. Masalahnya? Kadang skripsinya lebih suka nulis fanfiction daripada penelitian ilmiah.</p>
+        </div>
+
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Dosen Hologram</h2>
+            <p>Para dosen adalah hologram yang bisa di-customize. Mau dosen killer jadi imut atau dosen membosankan jadi stand-up comedian? Tinggal setting aja!</p>
+        </div>
+
+        <div class="dimension-item" onclick="toggleEffect(this)">
+            <h2>Ujian Telepati</h2>
+            <p>Forget about cheat sheets! Di sini, ujian dilakukan secara telepati. Masalahnya? Kadang malah kebaca gosip temen sebelah, bukan materi ujian.</p>
+        </div>
+        
+        <a href="index.html" class="back-button">Kembali ke Realitas</a>
+    </div>
+
+    <div class="easter-egg" onclick="showEasterEgg()">🍕</div>
+    <div class="hidden-message" id="easterEggMessage">Selamat! Anda menemukan pizza dimensi lain. Rasanya? Bayangkan perpaduan antara indomie, durian, dan es krim vanilla. Enak? Mungkin. Aneh? Pasti.</div>
+
+    <script>
+        function toggleEffect(element) {
+            element.style.transform = element.style.transform === 'scale(1.1) rotate(5deg)' 
+                ? 'scale(1) rotate(0deg)' 
+                : 'scale(1.1) rotate(5deg)';
+            
+            // Mengubah warna latar belakang secara acak
+            element.style.backgroundColor = getRandomColor();
+        }
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function showEasterEgg() {
+            const message = document.getElementById('easterEggMessage');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 5000);
+        }
+
+        // Efek hover untuk item dimensi
+        document.querySelectorAll('.dimension-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.05) rotate(2deg)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Animasi untuk tombol kembali
+        const backButton = document.querySelector('.back-button');
+        backButton.addEventListener('mouseover', () => {
+            backButton.style.transform = 'scale(1.1) rotate(-5deg)';
+        });
+        backButton.addEventListener('mouseout', () => {
+            backButton.style.transform = 'scale(1) rotate(0deg)';
+        });
+
+        // Easter egg tersembunyi: Konami Code
+        let konamiCode = '';
+        const secretCode = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightba';
+        document.addEventListener('keydown', (e) => {
+            konamiCode += e.key;
+            if (konamiCode.includes(secretCode)) {
+                alert('Wow! Anda telah menemukan kode rahasia! Selamat, Anda resmi menjadi mahasiswa dimensi lain!');
+                document.body.style.fontFamily = '"Comic Sans MS", cursive';
+                konamiCode = '';
+            }
+            if (konamiCode.length > secretCode.length) {
+                konamiCode = konamiCode.substr(konamiCode.length - secretCode.length);
+            }
+        });
+    </script>
+</body>
+</html>
